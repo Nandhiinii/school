@@ -1,0 +1,377 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Legend Montestori Play School</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!--====>> Favicon icon CSS <<====-->
+		<link rel="icon" type="image/x-icon" href="{% static 'img/favicon/favicon.ico' %}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+		<!--====>> Google fonts <<====-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+		<!--====>> Index CSS <<====-->
+		<link href="{% static 'css/index.css' %}" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="preloader">
+			<div class="preloader-container">
+				<div class="preloader-item">L</div>
+				<div class="preloader-item">M</div>
+				<div class="preloader-item"></div>
+				<div class="preloader-item"></div>
+				<div class="preloader-item"></div>
+			</div>
+		</div>
+		<!-- Begin quickLinks -->
+		<div class="quickLinks-wrap">
+			<div class="quickLinks-item" data-for-quick = '1'>
+				<div class="quickLinks-head">
+					<img src="{% static 'img/map-marker-white.svg' %}" alt="img">
+					<p>Location</p>
+				</div>
+			</div>
+			
+			<div class="quickLinks-item" data-for-quick = '3'>
+				<div class="quickLinks-head">
+					<img src="{% static 'img/paper-white.svg' %}" alt="img">
+					<p>For Parents</p>
+				</div>
+			</div>
+			<div class="quickLinks-item" data-for-quick = '4'>
+				<div class="quickLinks-head">
+					<img src="{% static 'img/phone-white.svg' %}" alt="img">
+					<p>Contacts</p>
+				</div>
+			</div>
+
+			<div class="quickLinks-desc" data-to-quick = '1'>
+				<div class="map-block">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1512.7468545911922!2d77.4927746987142!3d8.866715149459425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0423c00c2cf015%3A0x15bccb2eee1d2400!2sCSI%20Good%20Shepherd%20Church%2C%20Anna%20Nagar%2C%20Alangulam!5e0!3m2!1sen!2sin!4v1774318561998!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+			</div>
+		
+			<div class="quickLinks-desc" data-to-quick = '3'>
+				<div class="quickLinks-content">
+					<h4>Parent Resources</h4>
+					<div class="download-list">
+						<p>
+							<span>
+								<img src="{% static 'img/lazy.png' %}" class="lazy" data-src="{% static 'img/handbook.svg' %}" alt="img">
+								Parent Handbook (246 Kb)
+							</span>
+							<a href="#"><img src="{% static 'img/lazy.png' %}" class="lazy" data-src="{% static 'img/pdf-ico.svg' %}" alt="img">download</a>
+						</p>
+						<p>
+							<span>
+								<img src="{% static 'img/lazy.png' %}" class="lazy" data-src="{% static 'img/checklist.svg' %}" alt="img">
+								Child Care Checklist (95 KB)
+							</span>
+							<a href="#"><img src="{% static 'img/lazy.png' %}" class="lazy" data-src="{% static 'img/pdf-ico.svg' %}" alt="img">download</a>
+						</p>
+						<p>
+							<span>
+								<img src="{% static 'img/lazy.png' %}" class="lazy" data-src="{% static 'img/paper-form.svg' %}" alt="img">
+								Agreement Form (94 KB)
+							</span>
+							<a href="#"><img src="{% static 'img/lazy.png' %}" class="lazy" data-src="{% static 'img/pdf-ico.svg' %}" alt="img">download</a>
+						</p>
+						<p>
+							<span>
+								<img src="{% static 'img/lazy.png' %}" class="lazy" data-src="{% static 'img/billing.svg' %}" alt="img">
+								Monthly Billing Chart (95 KB)
+							</span>
+							<a href="#"><img src="{% static 'img/lazy.png' %}" class="lazy" data-src="{% static 'img/pdf-ico.svg' %}" alt="img">download</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="quickLinks-desc" data-to-quick='4'>
+    <div class="quickLinks-content">
+        <h4>Our Contacts</h4>
+
+        <div class="contact-list">
+            
+            <!-- Address -->
+            <a href="#" target="_blank">
+                <img src="{% static 'img/lazy.png' %}" class="lazy" 
+                     data-src="{% static 'img/map-marker-small.svg'%}" alt="marker">
+                S.No. 316/1A4, Alangulam Block,<br>
+                Anna Nagar, Alangulam,<br>
+                Tenkasi District – 627851, Tamil Nadu
+            </a>
+
+            <!-- Phone -->
+            <a href="tel:9952581849">
+                <img src="{% static 'img/lazy.png' %}" class="lazy" 
+                     data-src="{% static 'img/call.svg'%}" alt="call">
+                9952581849 / 9892422074
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:lmpschool2026@gmail.com">
+                <img src="{% static 'img/lazy.png' %}" class="lazy" 
+                     data-src="{% static 'img/envelope.svg'%}" alt="email">
+                lmpschool2026@gmail.com
+            </a>
+
+            <!-- Timing -->
+            <p>
+                <img src="{% static 'img/lazy.png' %}" class="lazy" 
+                     data-src="{% static 'img/clock.svg' %}" alt="time">
+                Mon - Fri: 9:00 AM – 5:00 PM <br>
+                Sat: 9:00 AM – 1:00 PM
+            </p>
+
+        </div>
+    </div>
+</div>
+		</div>
+		<!-- End quickLinks -->
+		<!-- Begin header -->
+		<header class="header">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="top-line">
+							<a href="{% url 'index' %}" class="logo"><img src="{% static 'img/images.jpeg' %}" alt="logo" style="height:90px;border-radius:80px;"></a>
+							<nav class="main-nav">
+								<ul class="main-nav-list">
+									<li>
+										<a href="{% url 'index' %}" class="active-link">Home</a>
+									</li>
+									<li>
+										<a href="{% url 'about' %}">About Us</a>
+									</li>
+									<li><a href="{% url 'programs' %}">Our Programs</a></li>
+									{% comment %} <li>
+										<a href="programs.html">Programs</a>
+									</li>
+									<li>
+										<a href="parent-info.html">Parent Info</a>
+									</li>
+									<li>
+										<a href="events.html">Events <i class="fas fa-angle-down"></i></a>
+										<ul class="tt-dropdown-menu">
+											<li>
+												<a href="events.html">Events </a>
+											</li>
+											<li><a href="single-event.html">Event post</a></li>
+										</ul>
+									</li> {% endcomment %}
+									{% comment %} <li>
+										<a href="{% url 'gallery' %}">Gallery <i class="fas fa-angle-down"></i></a>
+										<ul class="tt-dropdown-menu">
+											<li>
+												<a href="{% url 'gallery' %}">Gallery</a>
+											</li>
+											
+										</ul>
+									</li> {% endcomment %}
+                                    <li>
+												<a href="{% url 'gallery' %}">Gallery</a>
+											</li>
+								  
+                                    <li>
+										<a href="{% url 'faq' %}">FAQs</a>
+									</li>
+									{% comment %} <li>
+										<a href="#">Pages <i class="fas fa-angle-down"></i></a>
+										<ul class="tt-dropdown-menu">
+											<li>
+												<a href="faq.html">FAQs</a>
+											</li>
+											<li>
+												<a href="testimonials.html">Testimonials</a>
+											</li>
+											<li>
+												<a href="prices.html">Prices</a>
+											</li>
+										</ul>
+									</li> {% endcomment %}
+									{% comment %} <li>
+										<a href="blog-posts.html">Blog <i class="fas fa-angle-down"></i></a>
+										<ul class="tt-dropdown-menu">
+											<li>
+												<a href="blog-posts.html">Blog posts</a>
+											</li>
+											<li>
+												<a href="single-post.html">Single post</a>
+											</li>
+										</ul>
+									</li> {% endcomment %}
+									<li>
+										<a href="{% url 'contact' %}">Contacts</a>
+									</li>
+								</ul>
+								<div class="close-nav">
+									<svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M 10,10 L 30,30 M 30,10 L 10,30" fill="#3B4757"/>
+									</svg>
+								</div>
+							</nav>
+							<div class="header-controls">
+								{% comment %} <div class="header-search">
+									<i class="fas fa-search"></i>
+									<form action="#" class="search-form">
+										<input type="search" class="search" name="search" placeholder="Search...">
+										<button type="submit"><i class="fas fa-search"></i></button>
+									</form>
+								</div> {% endcomment %}
+								<div class="hamburger">
+									<svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1.02857 2.31427H22.9714C23.5371 2.31427 24 1.85141 24 1.2857C24 0.719983 23.5371 0.257126 22.9714 0.257126H1.02857C0.462857 0.257126 0 0.719983 0 1.2857C0 1.85141 0.462857 2.31427 1.02857 2.31427Z" fill="#3B4757"/>
+										<path d="M1.02857 10.0285H22.9714C23.5371 10.0285 24 9.56567 24 8.99996C24 8.43425 23.5371 7.97139 22.9714 7.97139H1.02857C0.462857 7.97139 0 8.43425 0 8.99996C0 9.56567 0.462857 10.0285 1.02857 10.0285Z" fill="#3B4757"/>
+										<path d="M1.02857 17.7428H22.9714C23.5371 17.7428 24 17.28 24 16.7143C24 16.1485 23.5371 15.6857 22.9714 15.6857H1.02857C0.462857 15.6857 0 16.1485 0 16.7143C0 17.28 0.462857 17.7428 1.02857 17.7428Z" fill="#3B4757"/>
+									</svg>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="top-img">
+				<img src="{% static 'img/lazy.png' %}" class="lazy" data-src="{% static 'img/cloud.png' %}" alt="cloud">
+			</div>
+			<!-- <div class="bottom-img">
+				<img src="img/lazy.png" class="lazy" data-src="img/cloud.png" alt="cloud">
+			</div> -->
+		</header>
+        {% block content%}
+        {% endblock%}
+        	<footer>
+			<div class="footer-top lazy" data-src="{% static 'img/footer-bg.svg' %}">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 col-lg-4">
+							<div class="f-subscribe">
+								<a href="index.html" class="logo"><img src="{% static 'img/images.jpeg' %}" alt="logo"></a>
+								<p>Our experienced team strives to offer a creative and engaging environment and the opportunity for children to learn, grow, and thrive.</p>
+								{% comment %} <form action="#" class="signup-form" id="newsletterForm">
+									<input type="text" name="email" class="signup" placeholder="Newsletter signup">
+									<button type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M0.505883 5.20577L0.491834 5.2027L6.51423 5.2027L4.62101 7.10009C4.5283 7.19272 4.47745 7.31821 4.47745 7.44992C4.47745 7.58162 4.5283 7.70623 4.62101 7.79909L4.91559 8.09382C5.00823 8.18645 5.13166 8.23767 5.2633 8.23767C5.39501 8.23767 5.51852 8.18682 5.61115 8.09418L8.85649 4.84913C8.94949 4.75613 9.00035 4.63226 8.99998 4.50048C9.00035 4.36796 8.94949 4.24401 8.85649 4.15116L5.61115 0.905818C5.51852 0.813257 5.39508 0.76233 5.2633 0.76233C5.13166 0.76233 5.00823 0.813331 4.91559 0.905818L4.62101 1.20055C4.5283 1.29304 4.47745 1.41655 4.47745 1.54826C4.47745 1.67989 4.5283 1.79689 4.62101 1.88945L6.53559 3.79745L0.499152 3.79745C0.227908 3.79745 -1.94412e-05 4.03123 -1.94175e-05 4.30233L-1.93811e-05 4.71918C-1.93574e-05 4.99028 0.23464 5.20577 0.505883 5.20577Z"/></svg></button>
+								</form> {% endcomment %}
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="f-nav">
+								<h4>Quick Links</h4>
+								<nav>
+									<ul class="flex-style">
+										<li><a href="{% url 'index' %}">Home</a></li>
+										<li><a href="{% url 'about' %}">About us</a></li>
+										<li><a href="{% url 'programs' %}">Our Programs</a></li>
+										<li><a href="{% url 'faq' %}">FAQs</a></li>
+										<li><a href="{% url 'gallery' %}">Gallery</a></li>
+										<li><a href="{% url 'contact' %}">Contacts</a></li>
+										
+									</ul>
+								</nav>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4">
+    <div class="f-contact">
+        <h4>Our Contacts</h4>
+
+        <div class="contact-list">
+            
+            <!-- Address -->
+            <a href="#" target="_blank">
+                <img src="{% static 'img/lazy.png' %}" class="lazy" 
+                     data-src="{% static 'img/map-marker-small.svg'%}" alt="marker">
+                S.No. 316/1A4, Alangulam Block,<br>
+                Anna Nagar, Alangulam,<br>
+                Tenkasi District – 627851, Tamil Nadu
+            </a>
+
+            <!-- Phone -->
+            <a href="tel:9952581849">
+                <img src="{% static 'img/lazy.png' %}" class="lazy" 
+                     data-src="{% static 'img/call.svg'%}" alt="call">
+                9952581849 / 9892422074
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:lmpschool2026@gmail.com">
+                <img src="{% static 'img/lazy.png' %}" class="lazy" 
+                     data-src="{% static 'img/envelope.svg'%}" alt="email">
+                lmpschool2026@gmail.com
+            </a>
+
+            <!-- Working Hours -->
+            <p>
+                <img src="{% static 'img/lazy.png' %}" class="lazy" 
+                     data-src="{% static 'img/clock.svg'%}" alt="time">
+                Mon - Fri: 9:00 AM – 5:00 PM <br>
+                Sat: 9:00 AM – 1:00 PM
+            </p>
+
+        </div>
+    </div>
+</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom-wrap">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="footer-bottom">
+								<p>&copy; 2026 <a href="#">Legend Montestori Play School.</a> All Rights Reserved. <a href="#">Privacy Policy</a></p>
+								<div class="soc-link-wrap">
+									<p>Follow us:</p>
+									<ul class="soc-link">
+										<li><a href="#">
+											<img src="{% static 'img/lazy.png' %}" class="lazy" data-src="{% static 'img/facebook.svg' %}" title='Facebook' alt="facebook">
+										</a></li>
+										<li><a href="#">
+											<img src="{% static 'img/lazy.png' %}" class="lazy" data-src="{% static 'img/twitter.svg' %}" title='Twitter' alt="twitter">
+										</a></li>
+										<li><a href="#">
+											<img src="{% static 'img/lazy.png' %}" class="lazy" data-src="{% static 'img/instagram.svg'%}" title='Instagram' alt="nstagram">
+										</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="up-btn">
+			<svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M13 6.36563C13 6.77035 12.8528 7.17536 12.5568 7.4918C11.9438 8.1459 10.924 8.172 10.2791 7.55029L6.48873 3.89339L2.72462 7.54655C2.08197 8.17055 1.06219 8.14763 0.446938 7.49525C-0.168314 6.84259 -0.145429 5.80813 0.497507 5.18413L5.37122 0.453213C5.99268 -0.149866 6.9715 -0.151024 7.59494 0.449475L12.4992 5.1801C12.8316 5.50199 13 5.93281 13 6.36563Z"/>
+			</svg>
+		</div>
+		<!-- ===> Juery 3.2.1 JS <==== -->
+		<script src="{% static 'vendor/jquery/jquery-3.7.1.min.js' %}"></script>
+		<!-- ===> Bootstrap 4 JS <==== -->
+		<script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+		<!-- ===> Lazy loader JS <==== -->
+		<script src="{% static 'vendor/lazy-load/jquery.lazy.min.js' %}"></script>
+		<!-- ===> Input mask JS <==== -->
+		<script src="{% static 'vendor/input-mask/jquery.mask.min.js' %}"></script>
+		<!-- Data picker -->
+		<script src="{% static 'vendor/bootstrap-datetimepicker/moment.js' %}"></script>
+		<script src="{% static 'vendor/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js' %}"></script>
+		<!-- Lightbox -->
+		<script src="{% static 'vendor/lightbox/ekko-light.min.js' %}"></script>
+		<!-- Masonry JS -->
+		<script src="{% static 'vendor/masonry/masonry.4.2.2.pkgd.min.js' %}"></script>
+		<!-- Images loader -->
+		<script src="{% static 'vendor/imagesloaded/imagesloaded_4.1.4.min.js' %}"></script>
+		<script src="{% static 'vendor/shuffle/isotope.js' %}"></script>
+		<!-- ===> Slick slider JS <==== -->
+		<script src="{% static 'vendor/slick/slick/slick.min.js' %}"></script>
+		<script src="{% static 'vendor/form-validation/jquery.form.js' %}"></script>
+		<script src="{% static 'vendor/form-validation/jquery.validate.min.js' %}"></script>
+		<script src="{% static 'vendor/paroller/dist/jquery.paroller.min.js' %}"></script>
+		<script src="{% static 'js/common.js' %}"></script>
+		<script src="{% static 'form/forms.js' %}"></script>
+	</body>
+</html>

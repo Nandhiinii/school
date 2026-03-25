@@ -1,0 +1,292 @@
+{% extends 'navbar.html'%}
+{% load static %}
+{% block content%}		
+<style>
+	.lmps-card {
+    transition: all 0.3s ease;
+}
+
+.lmps-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+</style>
+		<!-- Begin page name -->
+		<section class="page-name mb-xs-30 mb-md-30 mb-lg-60">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<h1 class="text-center">About Us</h1>
+					</div>
+				</div>
+			</div>
+			<div class="layer-background lazy" data-src="{% static 'img/slider.png' %}"></div>
+			<img src="{% static 'img/lazy.png' %}" class="page-name-img lazy" data-src="{% static 'img/cloud.png' %}" alt="Img">
+		</section>
+		<!-- End page name -->
+
+		<main class="main-container">
+			<!-- Begin text-block -->
+			<section class="text-block pb-xs-50 pb-sm-65 pb-md-90 pb-lg-120 pt-xs-30 pt-md-60">
+				<div class="container">
+					<div class="row align-items-sm-center align-items-lg-start">
+						<div class="col-lg-12 col-xl-6">
+							<div class="block-header pt-0">
+								<p class="mb-xs-15 mb-lg-8">Igniting the spark of genius in every child</p>
+								<h2 class="mb-xs-25 mb-md-25">We Work to Understand Your <span>Kids Needs</span></h2>
+							</div>
+							<p class="mb-xs-15 mb-lg-8">We provide a warm and encouraging atmosphere that enhances self-concept, instills basic moral values, encourages social interaction, and enriches awareness of the natural and cultural world. We’re a warm and loving community of preschoolers, teachers, and parents who inspire imagination, creativity, and play for every learner.</p>
+							<p class="mb-xs-20 mb-md-37">In an environment rooted in respect and compassion, we strive to nourish each child's spirit and provide a protective space for him or her to grow.</p>
+						</div>
+						<div class="col-lg-12 col-xl-6">
+							<div class="svg-block video-block">
+								<a href="https://www.youtube.com/watch?v=NkfKechADow" data-toggle="lightbox">
+									<img src="{% static 'img/lazy.png' %}" class="video-prev lazy" data-src="{% static 'img/video-prev.jpg' %}" alt="img">
+									<p class="video-btn"><span class="play-ico animate x2"><span><img src="{% static 'img/lazy.png' %}" class="lazy" data-src="{% static 'img/play.svg' %}" alt="img"></span></span></p>
+								</a>
+
+								<!-- <a href="https://www.youtube.com/watch?v=NkfKechADow" class="video-btn"><span class="play-ico"><img src="img/lazy.png" class="lazy" data-src='img/play.svg' alt="img"></span></a> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Begin text-block -->
+			<!-- Begin statements -->
+			<section class="wave-block pt-xs-110 pt-md-120 pt-lg-150 mb-xs-50 mb-sm-50 mb-md-70 mb-lg-120 lazy" data-src="{% static 'img/blue-wave.png' %}">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="section-header">
+								<p class="h-sub">What is special about Our Play School</p>
+								<h2>Vision & Mission Statements</h2>
+							</div>
+							<ul class="statement-list statement-slider" data-show-count='3' data-show-count-md='2' data-show-count-mob='1' data-slick-speed="5000" data-slick-autoplay="true">
+								<li>
+									<div class="statement-card">
+										<div class="statement-ico">
+											<img src="{% static 'img/lazy.png' %}" class="lazy" data-src="{% static 'img/paper.svg' %}" alt="img">
+										</div>
+										<h4>Our Mission</h4>
+										<p>We believe in the ability to improve the quality of life of the individuals and families across the city.</p>
+									</div>
+								</li>
+								<li>
+									<div class="statement-card">
+										<div class="statement-ico">
+											<img src="{% static 'img/lazy.png' %}" class="lazy" data-src="{% static 'img/vision.svg'%}" alt="img">
+										</div>
+										<h4>Our Vision</h4>
+										<p>Our vision for Early Years is based upon the premise that every child receives the very best education.</p>
+									</div>
+								</li>
+								<li>
+									<div class="statement-card">
+										<div class="statement-ico">
+											<img src="{% static 'img/lazy.png' %}" class="lazy" data-src="{% static 'img/philosophy.svg' %}" alt="img">
+										</div>
+										<h4>Philosophy</h4>
+										<p>We believe that a teacher-guided, balanced approach establishes an excellent educational foundation.</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End statements -->
+			<!-- Begin advantage-list second -->
+			<section class="mb-xs-60 mb-sm-70 mb-md-90 mb-lg-120">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="section-header">
+								<p class="h-sub">Prepare your child for school readiness</p>
+								<h2>Feel The Difference</h2>
+								<p>What gives our schools the quality you feel the moment you enter are the “pillars” of belief that support them. There are six core beliefs on which everything centers at our schools.</p>
+							</div>
+							<ol class="advantage-list advantage-second">
+								<li>
+									<div class="advantage-block">
+										<h5>Experiential Learning</h5>
+										<p>We help children connect with their surroundings in new ways, so they discover what is meaningful to them in the moment and in the future.</p>
+									</div>
+								</li>
+								<li>
+									<div class="advantage-block">
+										<h5>Community</h5>
+										<p>A child’s educational success in large part depends on families, educators, peers and relevant members of the community.</p>
+									</div>
+								</li>
+								<li>
+									<div class="advantage-block">
+										<h5>Collaboration</h5>
+										<p>Sharing new experiences and solving problems with others leads to a greater sense of connectedness – as well as meaningful learning experiences.</p>
+									</div>
+								</li>
+								<li>
+									<div class="advantage-block">
+										<h5>Proven Models</h5>
+										<p>Several important learning models have been developed by educators around the world. The human connection must be a key component of learning.</p>
+									</div>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End advantage-list second -->
+			<!-- Begin count section -->
+			<div class="count-section wave-block bg-cover mb-xs-50 mb-sm-55 mb-md-70 mb-lg-120 lazy" data-src="{% static 'img/count-bg.jpg' %}">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="count-list">
+								<div class="count-block-wrap">
+									<div class="count-block">
+										<div class="count-numb">
+											<p class="numb" data-number="15">15</p>
+											<img src="{% static 'img/lazy.png' %}" class="lazy" data-src="{% static 'img/cloud-small.svg' %}" alt="img">
+										</div>
+										<div class="count-text">
+											<p>Years of experience</p>
+										</div>
+									</div>
+								</div>
+								<div class="count-block-wrap">
+									<div class="count-block">
+										<div class="count-numb">
+											<p class="numb" data-number="142">142</p>
+											<img src="{% static 'img/lazy.png' %}" class="lazy" data-src="{% static 'img/cloud-small.svg' %}" alt="img">
+										</div>
+										<div class="count-text">
+											<p>Students Enrolled</p>
+										</div>
+									</div>
+								</div>
+								<div class="count-block-wrap">
+									<div class="count-block">
+										<div class="count-numb">
+											<p class="numb" data-number="24">24</p>
+											<img src="{% static 'img/lazy.png' %}" class="lazy" data-src="{% static 'img/cloud-small.svg' %}" alt="img">
+										</div>
+										<div class="count-text">
+											<p>Qualified Teachers</p>
+										</div>
+									</div>
+								</div>
+								<div class="count-block-wrap">
+									<div class="count-block">
+										<div class="count-numb">
+											<p class="numb" data-number="12">12</p>
+											<img src="{% static 'img/lazy.png' %}" class="lazy" data-src="{% static 'img/cloud-small.svg' %}" alt="img">
+										</div>
+										<div class="count-text">
+											<p>Total Groups</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+<section class="text-block text-block-reverce pb-xs-50 pb-sm-60 pb-md-60 pb-lg-120 pt-0">
+    <div class="container">
+        <div class="row align-items-sm-center align-items-lg-start">
+
+            <!-- LEFT CONTENT -->
+            <div class="col-md-6">
+                <div class="block-header pt-0">
+                    
+                    <p class="mb-xs-15 mb-lg-8 text-primary fw-semibold">
+                        Our Learning Approach
+                    </p>
+
+                    <h2 class="mb-xs-20 mb-md-20 fw-bold">
+                        Nurturing Young Minds with <span style="color:#ff6b6b;">Care & Creativity</span>
+                    </h2>
+                </div>
+
+                <p class="mb-3" style="font-size:16px; line-height:1.6;">
+                    <strong>Legend Montessori Play School</strong> is dedicated to early childhood education by combining the Montessori method with the Play Way approach.
+                </p>
+
+                <p class="mb-4 text-muted">
+                    We believe children learn best when they experience:
+                </p>
+
+                <!-- ✅ IMPROVED CARDS -->
+                <div class="row g-3">
+
+                    <div class="col-6">
+                        <div class="lmps-card p-3 h-100 rounded shadow-sm text-center"
+                             style="background: linear-gradient(145deg,#ffffff,#fff5f5); border-left:5px solid #ff6b6b;">
+                            
+                            <div style="font-size:30px;">🌱</div>
+                            <h6 class="fw-bold mt-2 mb-1">Explore Freely</h6>
+                            <p class="mb-0 text-muted" style="font-size:13px;">
+                                Independent exploration builds curiosity.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="lmps-card p-3 h-100 rounded shadow-sm text-center"
+                             style="background: linear-gradient(145deg,#ffffff,#f1f8ff); border-left:5px solid #4dabf7;">
+                            
+                            <div style="font-size:30px;">🎲</div>
+                            <h6 class="fw-bold mt-2 mb-1">Learn Through Play</h6>
+                            <p class="mb-0 text-muted" style="font-size:13px;">
+                                Play improves creativity & thinking.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="lmps-card p-3 h-100 rounded shadow-sm text-center"
+                             style="background: linear-gradient(145deg,#ffffff,#f3fff5); border-left:5px solid #51cf66;">
+                            
+                            <div style="font-size:30px;">🧩</div>
+                            <h6 class="fw-bold mt-2 mb-1">Hands-on Activities</h6>
+                            <p class="mb-0 text-muted" style="font-size:13px;">
+                                Practical learning strengthens memory.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="lmps-card p-3 h-100 rounded shadow-sm text-center"
+                             style="background: linear-gradient(145deg,#ffffff,#fff9e6); border-left:5px solid #f59f00;">
+                            
+                            <div style="font-size:30px;">🌟</div>
+                            <h6 class="fw-bold mt-2 mb-1">Build Confidence</h6>
+                            <p class="mb-0 text-muted" style="font-size:13px;">
+                                Expression builds strong personality.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT IMAGE (UNCHANGED) -->
+            <div class="col-md-6">
+                <div class="svg-block video-block">
+                    <img src="{% static 'img/lazy.png' %}" 
+                         class="lazy" 
+                         data-src="{% static 'img/education-big.png' %}" 
+                         alt="img">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+			<!-- Begin text-block -->
+		</main>
+
+	{% endblock %}

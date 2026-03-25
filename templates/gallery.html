@@ -1,0 +1,171 @@
+{% extends 'navbar.html'%}
+{% load static %}
+{% block content %}
+		<!-- End header -->
+		<!-- Begin page name -->
+		<section class="page-name mb-xs-30 mb-md-30 mb-lg-60">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<h1 class="text-center">Gallery</h1>
+					</div>
+				</div>
+			</div>
+			<div class="layer-background lazy" data-src="{% static 'img/slider.png' %}"></div>
+			<img src="{% static 'img/lazy.png' %}" class="page-name-img lazy" data-src="{% static 'img/cloud.png' %}" alt="Img">
+		</section>
+		<!-- End page name -->
+
+		<main class="main-container">
+			<section class="gallery-boxed pt-xs-30 pt-md-60 pb-xs-40 pb-md-70 pb-lg-120">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="section-header mb-xs-30 mb-md-31">
+								<p class="h-sub">A quick peek at our centre</p>
+								<h2>Legend Montestori Play School Photo Gallery</h2>
+								<p>We aim to capture the many smiles we see every day, show the many experiences the children have every day and provide you as the families a visual experience.</p>
+							</div>
+							<div class="grid-filter">
+								<ul class="centre-tab-list">
+									<li><a href="#" data-filter="*" class="active">All</a></li>
+									<li><a href="#" data-filter=".group1">Infants Rooms</a></li>
+									<li><a href="#" data-filter=".group2">Toddlers Rooms</a></li>
+									<li><a href="#" data-filter=".group3">Preschool Room</a></li>
+									<li><a href="#" data-filter=".group4">Outdoor</a></li>
+									<li><a href="#" data-filter=".group5">Summer Camp</a></li>
+								</ul>
+							</div>
+							<div class="grid boxed-gallery-grid">
+								<div class="grid-item group1">
+									<div class="gallery-item">
+										<a href="{% static 'img/grid-page/grid-1-x2.jpg' %}" data-gallery="example-gallery">
+											<img src="{% static 'img/grid-page/grid-1.jpg' %}" alt="img">
+										</a>
+									</div>
+								</div>
+								<div class="grid-item group1">
+									<div class="gallery-item">
+										<a href="{% static 'img/grid-page/grid-2-x2.jpg' %}" data-gallery="example-gallery">
+											<img src="{% static 'img/grid-page/grid-2.jpg' %}" alt="img">
+										</a>
+									</div>
+								</div>
+								<div class="grid-item group2">
+									<div class="gallery-item">
+										<a href="{% static 'img/grid-page/grid-3-x2.jpg' %}" data-gallery="example-gallery">
+											<img src="{% static 'img/grid-page/grid-3.jpg' %}" alt="img">
+										</a>
+									</div>
+								</div>
+								<div class="grid-item group3">
+									<div class="gallery-item">
+										<a href="{% static 'img/grid-page/grid-4.jpg' %}" data-gallery="example-gallery">
+											<img src="{% static 'img/grid-page/grid-4.jpg' %}" alt="img">
+										</a>
+									</div>
+								</div>
+								<div class="grid-item group4">
+									<div class="gallery-item">
+										<a href="{% static 'img/grid-page/grid-5.jpg' %}" data-gallery="example-gallery">
+											<img src="{% static 'img/grid-page/grid-5.jpg' %}" alt="img">
+										</a>
+									</div>
+								</div>
+								<div class="grid-item group5">
+									<div class="gallery-item">
+										<a href="{% static 'img/grid-page/grid-6.jpg' %}" data-gallery="example-gallery">
+											<img src="{% static 'img/grid-page/grid-6.jpg' %}" alt="img">
+										</a>
+									</div>
+								</div>
+								<div class="grid-item group4">
+									<div class="gallery-item">
+										<a href="{% static 'img/grid-page/grid-7.jpg' %}" data-gallery="example-gallery">
+											<img src="{% static 'img/grid-page/grid-7.jpg' %}" alt="img">
+										</a>
+									</div>
+								</div>
+								<div class="grid-item group3">
+									<div class="gallery-item">
+										<a href="{% static 'img/grid-page/grid-8.jpg' %}" data-gallery="example-gallery">
+											<img src="{% static 'img/grid-page/grid-8.jpg' %}" alt="img">
+										</a>
+									</div>
+								</div>
+								<div class="grid-item group2">
+									<div class="gallery-item">
+										<a href="{% static 'img/grid-page/grid-9.jpg' %}" data-gallery="example-gallery">
+											<img src="{% static 'img/grid-page/grid-9.jpg' %}" alt="img">
+										</a>
+									</div>
+								</div>
+								<div class="grid-item group4">
+									<div class="gallery-item">
+										<a href="{% static 'img/grid-page/grid-10.jpg' %}" data-gallery="example-gallery">
+											<img src="{% static 'img/grid-page/grid-10.jpg' %}" alt="img">
+										</a>
+									</div>
+								</div>
+								<div class="grid-item group2">
+									<div class="gallery-item">
+										<a href="{% static 'img/grid-page/grid-11.jpg' %}" data-gallery="example-gallery">
+											<img src="{% static 'img/grid-page/grid-11.jpg' %}" alt="img">
+										</a>
+									</div>
+								</div>
+								<div class="grid-item group4">
+									<div class="gallery-item">
+										<a href="{% static 'img/grid-page/grid-12.jpg' %}" data-gallery="example-gallery">
+											<img src="{% static 'img/grid-page/grid-12.jpg' %}" alt="img">
+										</a>
+									</div>
+								</div>
+								<div class="grid-item group3">
+									<div class="gallery-item">
+										<a href="{% static 'img/grid-page/grid-13.jpg' %}" data-gallery="example-gallery">
+											<img src="{% static 'img/grid-page/grid-13.jpg' %}" alt="img">
+										</a>
+									</div>
+								</div>
+								<div class="grid-item group2">
+									<div class="gallery-item">
+										<a href="{% static 'img/grid-page/grid-14.jpg' %}" data-gallery="example-gallery">
+											<img src="{% static 'img/grid-page/grid-14.jpg' %}" alt="img">
+										</a>
+									</div>
+								</div>
+								<div class="grid-item group4">
+									<div class="gallery-item">
+										<a href="{% static 'img/grid-page/grid-15.jpg' %}" data-gallery="example-gallery">
+											<img src="{% static 'img/grid-page/grid-15.jpg' %}" alt="img">
+										</a>
+									</div>
+								</div>
+								<div class="grid-item group4">
+									<div class="gallery-item">
+										<a href="{% static 'img/grid-page/grid-16.jpg' %}" data-gallery="example-gallery">
+											<img src="{% static 'img/grid-page/grid-16.jpg' %}" alt="img">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<ul class="pagination mb-0 mt-xs-20 mt-md-20 mt-lg-25">
+						<li>
+							<p class="active">1</p>
+						</li>
+						<li>
+							<a href="#">2</a>
+						</li>
+						<li>
+							<a href="#">3</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+
+		
+{% endblock %}

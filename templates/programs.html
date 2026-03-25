@@ -1,0 +1,305 @@
+{% extends 'navbar.html'%}
+{% load static %}
+{% block content%}
+
+<!-- ===== HERO ===== -->
+<section class="page-name mb-xs-30 mb-md-30 mb-lg-60">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<h1 class="text-center">Our Programs and Facilities</h1>
+					</div>
+				</div>
+			</div>
+			<div class="layer-background lazy" data-src="{% static 'img/slider.png' %}"></div>
+			<img src="{% static 'img/lazy.png' %}" class="page-name-img lazy" data-src="{% static 'img/cloud.png' %}" alt="Img">
+		</section>
+
+<!-- ===== MAIN ===== -->
+<main class="main-container">
+
+<!-- ===== PROGRAMS ===== -->
+<section class="programs-section">
+<div class="container">
+
+<div class="section-header text-center">
+    <p class="h-sub">We are dedicated to care and education</p>
+    <h2>Our Learning Approach</h2>
+    <p>We create a joyful and nurturing learning environment.</p>
+</div>
+
+<div class="row">
+
+<div class="col-md-4 mb-4">
+<div class="program-card">
+<img src="{% static 'img/infans1.jpg' %}" class="img-fluid">
+<div class="card-body">
+<h3>Montessori Learning</h3>
+<ul>
+<li>Hands-on materials</li>
+<li>Self-paced learning</li>
+<li>Independence building</li>
+<li>Practical life skills</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="col-md-4 mb-4">
+<div class="program-card">
+<img src="{% static 'img/toddler-1.jpg' %}" class="img-fluid">
+<div class="card-body">
+<h3>PlayWay Methods</h3>
+<ul>
+<li>Learning through play</li>
+<li>Interactive classrooms</li>
+<li>Creative development</li>
+<li>Social growth</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="col-md-4 mb-4">
+<div class="program-card">
+<img src="{% static 'img/preschool1.jpg' %}" class="img-fluid">
+<div class="card-body">
+<h3>Our Programs</h3>
+<ul>
+<li>Daycare</li>
+<li>Playgroup</li>
+<li>Pre-KG / LKG / UKG</li>
+<li>Abacus</li>
+<li> Phonics</li>
+</ul>
+</div>
+</div>
+</div>
+
+</div>
+
+<!-- TABLE -->
+
+
+</section>
+
+<!-- ===== FACILITIES & ACTIVITIES ===== -->
+<section class="extra-section">
+<div class="container">
+
+<div class="row">
+
+<!-- FACILITIES -->
+<div class="col-md-6">
+<h2 class="section-title text-center">Our Facilities</h2>
+<div class="row">
+
+<div class="col-6"><div class="feature-box"><div class="icon">🏫</div><p>Safe Classrooms</p></div></div>
+<div class="col-6"><div class="feature-box"><div class="icon">🧸</div><p>Child-friendly Environment</p></div></div>
+<div class="col-6"><div class="feature-box"><div class="icon">📚</div><p>Montessori Materials</p></div></div>
+<div class="col-6"><div class="feature-box"><div class="icon">📹</div><p>CCTV Surveillance</p></div></div>
+<div class="col-12"><div class="feature-box"><div class="icon">🧼</div><p>Clean & Hygienic Campus</p></div></div>
+
+</div>
+</div>
+
+<!-- ACTIVITIES -->
+<div class="col-md-6">
+<h2 class="section-title text-center">Activities</h2>
+<div class="row">
+
+<div class="col-6"><div class="feature-box"><div class="icon">📖</div><p>Storytelling</p></div></div>
+<div class="col-6"><div class="feature-box"><div class="icon">🎵</div><p>Rhymes & Music</p></div></div>
+<div class="col-6"><div class="feature-box"><div class="icon">🎨</div><p>Art & Craft</p></div></div>
+<div class="col-6"><div class="feature-box"><div class="icon">🗣️</div><p>Show & Tell</p></div></div>
+<div class="col-6"><div class="feature-box"><div class="icon">🧠</div><p>Life Skills</p></div></div>
+<div class="col-6"><div class="feature-box"><div class="icon">🎉</div><p>Festival Celebrations</p></div></div>
+
+</div>
+</div>
+
+</div>
+
+<!-- WHY CHOOSE -->
+<div class="why-section text-center">
+<h2 class="section-title mt-5">Why Choose LMPS?</h2>
+
+<div class="row mt-4">
+<div class="col-md-4"><div class="why-card">✔ Montessori + PlayWay learning</div></div>
+<div class="col-md-4"><div class="why-card">✔ Caring trained teachers</div></div>
+<div class="col-md-4"><div class="why-card">✔ Activity-based teaching</div></div>
+<div class="col-md-4"><div class="why-card">✔ Strong phonics & communication</div></div>
+<div class="col-md-4"><div class="why-card">✔ Safe nurturing environment</div></div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+</main>
+
+<!-- BACK TO TOP -->
+{% comment %} <div class="up-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div> {% endcomment %}
+
+<!-- ===== STYLES ===== -->
+<style>
+
+body {
+font-family: 'Poppins', sans-serif;
+}
+
+/* HERO */
+.page-name {
+
+background-size: cover;
+padding: 100px 0;
+color: white;
+}
+
+.page-name h1 {
+font-size: 45px;
+font-weight: bold;
+}
+
+/* PROGRAMS */
+.programs-section {
+padding: 60px 0;
+background: #f9fbff;
+}
+
+.section-header h2 {
+font-weight: bold;
+}
+
+.h-sub {
+color: #ff7a00;
+font-weight: 600;
+}
+
+/* CARD */
+.program-card {
+background: white;
+border-radius: 20px;
+overflow: hidden;
+box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+transition: 0.3s;
+}
+
+.program-card:hover {
+transform: translateY(-10px);
+}
+
+.program-card img {
+border-bottom: 4px solid #ff7a00;
+}
+
+.card-body {
+padding: 20px;
+}
+
+.card-body h3 {
+color: #ff7a00;
+font-weight: bold;
+}
+
+.card-body ul {
+list-style: none;
+padding: 0;
+}
+
+.card-body ul li {
+margin: 8px 0;
+}
+
+.card-body ul li::before {
+content: "✔ ";
+color: #ff7a00;
+}
+
+/* TABLE */
+.custom-table {
+width: 100%;
+border-radius: 10px;
+overflow: hidden;
+}
+
+.custom-table thead {
+background: #ff7a00;
+color: white;
+}
+
+.custom-table th, .custom-table td {
+padding: 12px;
+text-align: center;
+}
+
+.custom-table tbody tr:nth-child(even) {
+background: #f2f2f2;
+}
+
+/* EXTRA SECTION */
+.extra-section {
+padding: 60px 0;
+background: linear-gradient(to right,#f9fbff,#ffffff);
+}
+
+.section-title {
+font-weight: 700;
+margin-bottom: 30px;
+}
+
+/* FEATURE BOX */
+.feature-box {
+background: white;
+border-radius: 15px;
+padding: 20px;
+text-align: center;
+margin-bottom: 20px;
+box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+transition: 0.3s;
+}
+
+.feature-box .icon {
+font-size: 30px;
+margin-bottom: 10px;
+}
+
+.feature-box:hover {
+transform: translateY(-8px);
+box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+background: linear-gradient(45deg,#ff7a00,#ffb347);
+color: white;
+}
+
+/* WHY */
+.why-card {
+background: linear-gradient(45deg,#ff7a00,#ffb347);
+color: white;
+padding: 20px;
+border-radius: 15px;
+margin-bottom: 20px;
+transition: 0.3s;
+}
+
+.why-card:hover {
+transform: translateY(-5px);
+}
+
+/* TOP BUTTON */
+.up-btn {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background: #46AADC;
+color: white;
+padding: 12px 15px;
+border-radius: 50%;
+cursor: pointer;
+}
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+</style>
+
+{% endblock %}
