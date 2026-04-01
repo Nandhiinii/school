@@ -27,6 +27,15 @@ urlpatterns = [
    path('gallery',views.gallery,name='gallery'),
    path('faq',views.faq,name='faq'),
    path('programs',views.programs,name='programs'),
+    path('api/admin-login/', views.admin_login),
+    path('api/applications/', views.get_applications),
+    path('api/update-status/', views.update_application_status),
+    path('api/subjects/', views.get_subjects),                
+    path('api/subjects/<int:id>/', views.get_subject),        
+    path('api/subjects/create/', views.create_subject),       
+    path('api/subjects/update/<int:id>/', views.update_subject), 
+    path('api/subjects/delete/<int:id>/', views.delete_subject), 
 ]
+
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])

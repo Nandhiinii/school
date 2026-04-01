@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-4ofdtln@5b3vrr-mk24=hp9yr5%%y9_iup2p(jf(n!*)$-or&e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['school-sent.onrender.com']
-
+ALLOWED_HOSTS = ["*"]
+AUTH_USER_MODEL = 'school_app.CustomUser'
 
 # Application definition
 
@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'school_app'
+    'school_app',
+     'rest_framework',
 ]
 
 MIDDLEWARE = [

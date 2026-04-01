@@ -19,9 +19,12 @@ from django.urls import path, include
 import school_app.urls
 from django.conf import settings
 from django.conf.urls.static import static
+from school_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(school_app.urls)),
+    path('index',views.index,name="index"),
+   
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])
