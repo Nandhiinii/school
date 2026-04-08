@@ -43,46 +43,112 @@
 						<div class="col-lg-6 mb-xs-50 mb-md-60 iframe-responsive">
 							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1512.7468545911922!2d77.4927746987142!3d8.866715149459425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0423c00c2cf015%3A0x15bccb2eee1d2400!2sCSI%20Good%20Shepherd%20Church%2C%20Anna%20Nagar%2C%20Alangulam!5e0!3m2!1sen!2sin!4v1774318561998!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
 						<div class="col-lg-6 mb-xs-20 mb-md-60">
-							<h2>Get In Touch</h2>
-							<p class="mb-xs-10 mb-lg-20">Each year, we have many fun Legend Montestori School Family events scheduled simultaneously in all of our centres. In addition, each Legend Montestori School location has its own unique events.</p>
+							{% comment %} <h2>Get In Touch</h2>
+							<p class="mb-xs-10 mb-lg-20">Each year, we have many fun Legend Montestori School Family events scheduled simultaneously in all of our centres. In addition, each Legend Montestori School location has its own unique events.</p> {% endcomment %}
 							<!-- Begin main-form -->
 							 {% for message in messages %}
 <div class="alert alert-success">
     {{ message }}
 </div>
 {% endfor %}
-							<form action="{%  url 'contact' %}" class="main-form"   method="post">
-								 {% csrf_token %}
-								<div class="successform">
-									<p>Your message was sent successfully!</p>
-								</div>
-								<div class="errorform">
-									<p>Something went wrong, try refreshing and submitting the form again.</p>
-								</div>
-								<div class="input-area">
-									<div class="input-wrap">
-										<input type="text" name="name" placeholder="Your name">
-									</div>
-									<div class="input-wrap">
-										<input type="email" name="email" placeholder="E-mail">
-									</div>
-								</div>
-								<div class="input-area">
-									<div class="input-wrap">
-										<input type="tel" name="phone" placeholder="Your phone">
-									</div>
-									<div class="input-wrap">
-    <select name="class_id" class="custom-select" required>
-        <option value="">Select Class</option>
-        {% for cls in classes %}
-            <option value="{{ cls.id }}">{{ cls.name }}</option>
-        {% endfor %}
-    </select>
+						<h2>Get In Touch</h2>
+<p class="mb-xs-10 mb-lg-20 fw-bold">
+    Thank you for your interest in Legend Montessori Play School (LMPS).
+    Please fill this form and our team will contact you shortly.
+</p>
+
+{% for message in messages %}
+<div class="alert alert-success">
+    {{ message }}
 </div>
-								</div>
-								<textarea name="message" placeholder="Your message"></textarea>
-								<button type="submit" class="button read-more mt-10">send message <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M0.505883 5.20577L0.491834 5.2027L6.51423 5.2027L4.62101 7.10009C4.5283 7.19272 4.47745 7.31821 4.47745 7.44992C4.47745 7.58162 4.5283 7.70623 4.62101 7.79909L4.91559 8.09382C5.00823 8.18645 5.13166 8.23767 5.2633 8.23767C5.39501 8.23767 5.51852 8.18682 5.61115 8.09418L8.85649 4.84913C8.94949 4.75613 9.00035 4.63226 8.99998 4.50048C9.00035 4.36796 8.94949 4.24401 8.85649 4.15116L5.61115 0.905818C5.51852 0.813257 5.39508 0.76233 5.2633 0.76233C5.13166 0.76233 5.00823 0.813331 4.91559 0.905818L4.62101 1.20055C4.5283 1.29304 4.47745 1.41655 4.47745 1.54826C4.47745 1.67989 4.5283 1.79689 4.62101 1.88945L6.53559 3.79745L0.499152 3.79745C0.227908 3.79745 -1.94412e-05 4.03123 -1.94175e-05 4.30233L-1.93811e-05 4.71918C-1.93574e-05 4.99028 0.23464 5.20577 0.505883 5.20577Z"/></svg></button>
-							</form>
+{% endfor %}
+
+<form action="{% url 'contact' %}" class="main-form" method="post">
+    {% csrf_token %}
+
+    <!-- Parent Name & Mobile -->
+    <div class="input-area">
+        <div class="input-wrap">
+            <input type="text" name="parent_name" placeholder="Parent Name" required>
+        </div>
+
+        <div class="input-wrap">
+            <input type="tel" name="mobile"
+                   placeholder="Mobile Number"
+                  
+                   maxlength="10"
+                   required>
+        </div>
+    </div>
+
+    <!-- Child Name & DOB -->
+    <div class="input-area">
+        <div class="input-wrap">
+            <input type="text" name="child_name" placeholder="Child Name" required>
+        </div>
+
+        <div class="input-wrap">
+            <input type="date" name="dob" required>
+        </div>
+    </div>
+
+    <!-- Class Interested (Dynamic) & Admission Needed -->
+    <div class="input-area">
+        <div class="input-wrap">
+            <select name="class_interested" class="custom-select" required>
+                <option value="">Select Class</option>
+                {% for cls in classes %}
+                    <option value="{{ cls.id }}">{{ cls.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="input-wrap">
+            <select name="admission_needed" class="custom-select"  required>
+                <option value="">Admission Needed</option>
+                <option value="Immediate">Immediate</option>
+                <option value="Next Academic Year">Next Academic Year</option>
+                <option value="Just Enquiry">Just Enquiry</option>
+            </select>
+        </div>
+    </div>
+    <br>
+    <!-- Location -->
+    <div class="input-area">
+        <div class="input-wrap">
+            <input type="text" name="location" placeholder="Your Area / Location" required>
+        </div>
+    </div>
+
+    <!-- Consent -->
+
+    <div class="input-area" style="margin-top:10px;">
+
+    <label style="display:flex; align-items:center; gap:10px; cursor:pointer;">
+
+        <!-- Hidden actual checkbox -->
+        <input type="checkbox" name="consent" required style="display:none;">
+
+        <!-- Custom visible box -->
+        <span style="
+            width:18px;
+            height:18px;
+           
+            display:inline-block;
+            position:relative;
+        "></span>
+
+        I agree to be contacted by LMPS via call/WhatsApp
+
+    </label>
+
+</div>
+
+    <!-- Submit -->
+    <button type="submit" class="button read-more mt-10">
+        👉 Request a Call
+    </button>
+</form>
 							<!-- End main-form -->
 						</div>
 					</div>
