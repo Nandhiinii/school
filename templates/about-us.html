@@ -38,18 +38,50 @@
 							<p class="mb-xs-15 mb-lg-8">We provide a warm and encouraging atmosphere that enhances self-concept, instills basic moral values, encourages social interaction, and enriches awareness of the natural and cultural world. We’re a warm and loving community of preschoolers, teachers, and parents who inspire imagination, creativity, and play for every learner.</p>
 							<p class="mb-xs-20 mb-md-37">In an environment rooted in respect and compassion, we strive to nourish each child's spirit and provide a protective space for him or her to grow.</p>
 						</div>
-						<div class="col-lg-12 col-xl-6">
-							<div class="svg-block video-block">
-								<a href="https://www.youtube.com/watch?v=NkfKechADow" data-toggle="lightbox">
-									<img src="{% static 'img/lazy.png' %}" class="video-prev lazy" data-src="{% static 'img/video-prev.jpg' %}" alt="img">
-									<p class="video-btn"><span class="play-ico animate x2"><span><img src="{% static 'img/lazy.png' %}" class="lazy" data-src="{% static 'img/play.svg' %}" alt="img"></span></span></p>
-								</a>
+					{% load static %}
 
-								<!-- <a href="https://www.youtube.com/watch?v=NkfKechADow" class="video-btn"><span class="play-ico"><img src="img/lazy.png" class="lazy" data-src='img/play.svg' alt="img"></span></a> -->
-							</div>
-						</div>
-					</div>
-				</div>
+<div class="col-lg-12 col-xl-6">
+    <div class="svg-block video-block position-relative">
+
+        <!-- Thumbnail Image -->
+        <img src="{% static 'img/video-prev.jpg' %}" 
+             width="100%" 
+             onclick="openModal()" 
+             style="cursor:pointer;">
+
+        <!-- Play Button -->
+        <p class="video-btn" onclick="openModal()" style="cursor:pointer;">
+            <span class="play-ico animate x2">
+                <span>
+                    <img src="{% static 'img/play.svg' %}" alt="play">
+                </span>
+            </span>
+        </p>
+
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="videoModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content bg-dark">
+            
+            <div class="modal-body p-0">
+
+                <!-- Video inside modal -->
+                <video id="modalVideo" width="100%" controls >
+                    <source src="{% static 'img/Legend Montessori play school.mp4' %}" type="video/mp4">
+                </video>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
 			</section>
 			<!-- Begin text-block -->
 			<!-- Begin statements -->
@@ -285,7 +317,19 @@
         </div>
     </div>
 </section>
+<script>
+function openModal() {
+    const modal = new bootstrap.Modal(document.getElementById('videoModal'));
+    modal.show();
+}
 
+// Stop video when modal closes
+document.getElementById('videoModal').addEventListener('hidden.bs.modal', function () {
+    const video = document.getElementById('modalVideo');
+    video.pause();
+    video.currentTime = 0;
+});
+</script>
 			<!-- Begin text-block -->
 		</main>
 

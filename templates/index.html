@@ -690,42 +690,42 @@
 							</div>
 							<div class="gallery-prewiev-wrap on-scroll fade-up">
 								<div class="gallery-item">
-									<a href="{% static 'img/gallery-1-x2.jpg' %}" data-gallery="example-gallery">
+									<a href="{% static 'img/gallery1.jpeg' %}" data-gallery="example-gallery">
 										<picture>
-											<source type="image/webp" srcset="{% static 'img/gallery-1-1.webp' %}">
-											<source type="image/jpeg" srcset="{% static 'img/gallery-1-1.jpg' %}">
-											<img src="{% static 'img/gallery-1-1.jpg' %}" alt="img">
+											<source type="image/webp" srcset="{% static 'img/gallery1.jpeg' %}">
+											<source type="image/jpeg" srcset="{% static 'img/gallery1.jpeg' %}">
+											<img src="{% static 'img/img/gallery1.jpeg' %}" alt="img">
 										</picture>
 									</a>
 								</div>
 								<div class="gallery-item">
-									<a href="{% static 'img/gallery-2-x2.jpg' %}" data-gallery="example-gallery">
+									<a href="{% static 'img/gallery2.jpeg' %}" data-gallery="example-gallery">
 										<picture>
-											<source type="image/webp" srcset="{% static 'img/gallery-2.webp'%}">
-											<source type="image/jpeg" srcset="{% static 'img/gallery-2.jpg' %}">
-											<img src="{% static 'img/gallery-2.jpg' %}" alt="img">
+											<source type="image/webp" srcset="{% static 'img/gallery2.jpeg'%}">
+											<source type="image/jpeg" srcset="{% static 'img/gallery2.jpeg' %}">
+											<img src="{% static 'img/gallery2.jpeg' %}" alt="img">
 										</picture>
 									</a>
 								</div>
 								<div class="gallery-item">
-									<a href="{% static 'img/gallery-3-x2.jpg' %}" data-gallery="example-gallery">
+									<a href="{% static 'img/gallery3.jpeg' %}" data-gallery="example-gallery">
 										<picture>
-											<source type="image/webp" srcset="{% static 'img/gallery-3.webp' %}">
-											<source type="image/jpeg" srcset="{% static 'img/gallery-3.jpg' %}">
-											<img src="{% static 'img/gallery-3.jpg' %}" alt="img">
+											<source type="image/webp" srcset="{% static 'img/gallery3.jpeg' %}">
+											<source type="image/jpeg" srcset="{% static 'img/gallery3.jpeg' %}">
+											<img src="{% static 'img/gallery3.jpeg' %}" alt="img">
 										</picture>
 									</a>
 								</div>
 								<div class="gallery-item">
-									<a href="img/gallery-4-x2.jpg" data-gallery="example-gallery">
+									<a href="{% static 'img/gallery4.jpeg' %}" data-gallery="example-gallery">
 										<picture>
-											<source type="image/webp" srcset="{% static 'img/gallery-4.webp' %}">
-											<source type="image/jpeg" srcset="{% static 'img/gallery-4.jpg' %}">
-											<img src="{% static 'img/gallery-4.jpg' %}" alt="img">
+											<source type="image/webp" srcset="{% static 'img/gallery4.jpeg' %}">
+											<source type="image/jpeg" srcset="{% static 'img/gallery4.jpeg' %}">
+											<img src="{% static 'img/gallery4.jpeg' %}" alt="img">
 										</picture>
 									</a>
 								</div>
-								<div class="gallery-item">
+								{% comment %} <div class="gallery-item">
 									<a href="img/gallery-5-x2.jpg" data-gallery="example-gallery">
 										<picture>
 											<source type="image/webp" srcset="{% static 'img/gallery-5.webp' %}">
@@ -755,8 +755,8 @@
 													</picture>
 												</a>
 											</div>
-										</div>
-										<div class="mini-gallery__item">
+										</div> {% endcomment %}
+										{% comment %} <div class="mini-gallery__item">
 											<div class="inner-wrap">
 												<a href="{% static 'img/gallery-8-x2.jpg' %}" data-gallery="example-gallery">
 													<picture>
@@ -789,9 +789,9 @@
 												</a>
 											</div>
 										</div>
-									</div>
+									</div> {% endcomment %}
 								</div>
-								<div class="gallery-item">
+								{% comment %} <div class="gallery-item">
 									<a href="{% static 'img/gallery-11-x2.jpg' %}" data-gallery="example-gallery">
 										<picture>
 											<source type="image/webp" srcset="{% static 'img/gallery-11.webp' %}">
@@ -799,7 +799,7 @@
 											<img src="{% static 'img/gallery-11.jpg' %}" alt="img">
 										</picture>
 									</a>
-								</div>
+								</div> {% endcomment %}
 							</div>
 						</div>
 					</div>
