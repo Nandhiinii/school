@@ -20193,11 +20193,11 @@
  .news-block .news-block-description .news-block-description__main-info p.news-author {
 	 font-style: italic;
 }
- .news-block .news-block-description .news-block-description__short-text h4 {
+ .news-block .news-block-description .news-block-description__short-text  {
 	 margin-bottom: 20px;
 }
  .news-block .news-block-description .news-block-description__short-text h4 a {
-	 color: #3B4757;
+	  color: #3B4757;
 }
  .news-block .news-block-description .news-block-description__short-text h4 a:hover {
 	 color: #46AADD;

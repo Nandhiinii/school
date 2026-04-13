@@ -35,6 +35,7 @@ urlpatterns = [
     path('api/subjects/create/', views.create_subject),       
     path('api/subjects/update/<int:id>/', views.update_subject), 
     path('api/subjects/delete/<int:id>/', views.delete_subject), 
+    path('api/admission',views.admission_api)
 ]
 
 if settings.DEBUG:

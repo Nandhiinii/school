@@ -5,18 +5,15 @@ from rest_framework.response import Response
 from django.contrib.auth import authenticate
 from django.contrib import messages
 from school_app.serializers import *
-
+from django.contrib.auth.hashers import check_password
+from datetime import datetime
+from .models import SubjectDetails, ApplicationDetails, CustomUser
 
 def index(request):
     return render(request,'index.html')
 
 def about_details(request):
     return render(request,'about-us.html')
-
-from django.shortcuts import render, redirect
-from django.contrib import messages
-from datetime import datetime
-from .models import SubjectDetails, ApplicationDetails, CustomUser
 
 
 def contact(request):
@@ -111,15 +108,22 @@ def programs(request):
 
 #-------------------------------Mobile App APIs------------------------------#
 
-
 @api_view(['POST'])
 def admin_login(request):
-    username = request.data.get('username')
+    mobile_number = request.data.get('mobile_number')
+    print(mobile_number)
     password = request.data.get('password')
+    print(password)
+    try:
+        user = CustomUser.objects.get(mobile_number=mobile_number)
+        print(user)
+    except CustomUser.DoesNotExist:
+        return Response({
+            'status': False,
+            'message': 'User not found'
+        })
 
-    user = authenticate(username=username, password=password)
-
-    if user is not None and user.role == 'admin':
+    if check_password(password, user.password) and user.role == 'admin':
         return Response({
             'status': True,
             'message': 'Login successful',
@@ -131,6 +135,26 @@ def admin_login(request):
             'status': False,
             'message': 'Invalid credentials or not admin'
         })
+
+# @api_view(['POST'])
+# def admin_login(request):
+#     username = request.data.get('username')
+#     password = request.data.get('password')
+
+#     user = authenticate(username=username, password=password)
+
+#     if user is not None and user.role == 'admin':
+#         return Response({
+#             'status': True,
+#             'message': 'Login successful',
+#             'user_id': user.id,
+#             'role': user.role
+#         })
+#     else:
+#         return Response({
+#             'status': False,
+#             'message': 'Invalid credentials or not admin'
+#         })
     
 from .models import ApplicationDetails
 from .serializers import ApplicationSerializer
@@ -267,3 +291,86 @@ def delete_subject(request, id):
 
     subject.delete()
     return Response({'status': True, 'message': 'Deleted successfully'})
+
+
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from datetime import datetime
+from .models import CustomUser, ApplicationDetails, SubjectDetails
+
+@api_view(['POST'])
+def admission_api(request):
+    parent_name = request.data.get('parent_name')
+    mobile = request.data.get('mobile')
+    child_name = request.data.get('child_name')
+    dob = request.data.get('dob')
+    class_id = request.data.get('class_interested')
+    admission_needed = request.data.get('admission_needed')
+    location = request.data.get('location')
+    consent = request.data.get('consent')
+    if not parent_name or not mobile:
+        return Response({
+            'status': False,
+            'message': 'Parent name and mobile are required'
+        })
+
+    if not class_id:
+        return Response({
+            'status': False,
+            'message': 'Please select a class'
+        })
+
+    if not consent:
+        return Response({
+            'status': False,
+            'message': 'Please accept consent'
+        })
+    dob_obj = None
+    if dob:
+        try:
+            dob_obj = datetime.strptime(dob, "%Y-%m-%d").date()
+        except ValueError:
+            return Response({
+                'status': False,
+                'message': 'Invalid date format (use YYYY-MM-DD)'
+            })
+    class_obj = SubjectDetails.objects.filter(id=class_id).first()
+    if not class_obj:
+        return Response({
+            'status': False,
+            'message': 'Invalid class selected'
+        })
+    user, created = CustomUser.objects.get_or_create(
+        username=mobile,
+        defaults={
+            'mobile_number': mobile,
+            'role': 'parent'
+        }
+    )
+
+    user.first_name = parent_name
+    user.mobile_number = mobile
+    user.save()
+    ApplicationDetails.objects.create(
+        parent_detail=user,
+        class_detail=class_obj,
+        child_name=child_name if hasattr(ApplicationDetails, 'child_name') else None,
+        dob=dob_obj if hasattr(ApplicationDetails, 'dob') else None,
+        admission_needed=admission_needed if hasattr(ApplicationDetails, 'admission_needed') else None,
+        location=location if hasattr(ApplicationDetails, 'location') else None,
+        consent=True if consent else False if hasattr(ApplicationDetails, 'consent') else None,
+        enquired_details=f"""
+Child Name: {child_name}
+DOB: {dob}
+Admission Needed: {admission_needed}
+Location: {location}
+""",
+        description=f"LMPS Admission Enquiry - {parent_name}",
+        status='Common'
+    )
+
+    return Response({
+        'status': True,
+        'message': 'Admission enquiry submitted successfully',
+        'user_id': user.id
+    })
